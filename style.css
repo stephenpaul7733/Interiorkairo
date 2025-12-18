@@ -207,7 +207,7 @@ nav {
   top:-1px;
   left:-2px;
   border-radius: 3px;
-  background-color:#340842;
+  background-color:#3d7457;
 }
 .ul li .button .p{
   color: var(--white-show);
@@ -302,7 +302,7 @@ nav {
   font-weight: 400;
 }
 .about_page{
-  width: 50%;
+  width: 90%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -310,7 +310,7 @@ nav {
 }
 .about_page img
 {
-  width: 100%;
+  width: 70%;
   background-size: cover;
   background-position: top center ;
 }
@@ -1177,6 +1177,82 @@ nav {
   display: flex;
   gap: 30px;
 }
+/* EXTRA MOBILE TWEAKS */
+
+/* For screens <= 768px */
+@media (max-width: 768px) {
+  /* Reduce global paddings */
+  .section,
+  .heroWrapper,
+  .blog,
+  .Testimonials {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  /* Slightly smaller base text */
+  body {
+    font-size: 15px;
+  }
+
+  .herotitle h1 {
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+  }
+
+  .herotitle p,
+  .sectiontitle p {
+    font-size: 14px;
+    line-height: 1.7rem;
+  }
+
+  /* Prevent horizontal scroll from counters / grids */
+  .CounterWrap,
+  .ServicesWrap,
+  .BlogWrap {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Make header logo + menu fit better */
+  .logo img {
+    max-width: 130px;
+  }
+}
+
+/* For very small phones <= 480px */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .herotitle h1 {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+
+  .herotitle p {
+    font-size: 13px;
+  }
+
+  .btn1 {
+    width: 130px;
+    height: 42px;
+    font-size: 13px;
+  }
+
+  /* Make sure no section content overflows */
+  .section,
+  .heroWrapper,
+  .Teamworks,
+  .Testimonials,
+  .blog,
+  .footer {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 
 /* MOBILE ONLY */
 @media (max-width:1100px){
@@ -1266,5 +1342,552 @@ nav {
 
   .footer_Col p{
     font-size: 14px;
+  }
+}
+
+/* ================= COMPREHENSIVE MOBILE RESPONSIVE ================= */
+
+/* Tablet & Mobile - General */
+@media (max-width: 1024px) {
+  body {
+    padding-top: 80px;
+  }
+
+  .section {
+    flex-direction: column;
+    padding: 80px 6%;
+    gap: 40px;
+  }
+
+  .section_title {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section_title h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  .section_title h2 {
+    font-size: 2rem;
+  }
+
+  .section_title p {
+    font-size: 16px;
+  }
+
+  .about_image {
+    width: 100%;
+  }
+
+  .about_content {
+    width: 100%;
+  }
+
+  .Services_Wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .Team_works {
+    flex-direction: column;
+  }
+
+  .team_works_steps {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .Team_Works_title {
+    width: 100%;
+    min-height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .Counter_Wrap {
+    flex-direction: column;
+    top: auto;
+    position: relative;
+    width: 100%;
+    left: 0;
+    padding: 40px;
+  }
+
+  .logo img {
+    width: 180px;
+  }
+}
+
+/* Mobile - Medium (768px and below) */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  nav {
+    height: 70px;
+    padding: 0 6%;
+  }
+
+  .section {
+    flex-direction: column;
+    padding: 60px 6%;
+    gap: 30px;
+  }
+
+  .hero_Wrapper {
+    padding: 60px 6%;
+    min-height: auto;
+  }
+
+  .hero_title {
+    width: 100%;
+  }
+
+  .hero_title h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hero_title p {
+    font-size: 16px;
+  }
+
+  .btn1 {
+    height: 50px;
+    width: 160px;
+    font-size: 16px;
+  }
+
+  .section_title h1 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  .section_title h2 {
+    font-size: 1.5rem;
+  }
+
+  .section_title p {
+    font-size: 15px;
+    line-height: 1.8rem;
+  }
+
+  .Services_Wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .Services_Box {
+    padding: 25px;
+  }
+
+  .about_Wrap {
+    gap: 15px;
+  }
+
+  #signature {
+    width: 150px;
+  }
+
+  .Work_Content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .Work_Content span {
+    padding: 30px;
+    font-size: 24px;
+  }
+
+  .Testimonials_title h1 {
+    font-size: 2rem;
+  }
+
+  .client_Details {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .Banner {
+    height: 300px;
+  }
+
+  .Banner_title h1 {
+    font-size: 2rem;
+  }
+
+  .yt-play-btn {
+    width: 70px;
+    height: 70px;
+  }
+
+  .yt-play-btn i {
+    font-size: 32px;
+  }
+
+  .blog {
+    padding: 60px 6%;
+  }
+
+  .blog_title h1 {
+    font-size: 2rem;
+  }
+
+  .blog_title h2 {
+    font-size: 1.5rem;
+  }
+
+  .Blog_Wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .Protfolio_Splide {
+    margin-top: 40px;
+  }
+
+  .splide__slide {
+    height: 250px;
+  }
+
+  .New_projekt_title {
+    padding: 60px 6%;
+    flex-direction: column;
+  }
+
+  .New_projekt_title .btn1 {
+    margin-top: 20px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .header {
+    height: 70px;
+  }
+}
+
+/* Mobile - Small (480px and below) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 65px;
+  }
+
+  nav {
+    height: 65px;
+    padding: 0 4%;
+  }
+
+  .section {
+    padding: 40px 4%;
+    gap: 20px;
+  }
+
+  .hero_Wrapper {
+    padding: 40px 4%;
+    min-height: auto;
+  }
+
+  .hero_title {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .hero_title h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .hero_title p {
+    font-size: 14px;
+  }
+
+  .btn1 {
+    height: 45px;
+    width: 140px;
+    font-size: 14px;
+  }
+
+  .section_title h1 {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .section_title h2 {
+    font-size: 1.2rem;
+  }
+
+  .section_title p {
+    font-size: 14px;
+    line-height: 1.6rem;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .header {
+    height: 65px;
+  }
+
+  .ul {
+    width: 75%;
+    padding: 60px 20px;
+  }
+
+  .ri-menu-5-fill {
+    font-size: 24px;
+  }
+
+  .ri-close-large-line {
+    font-size: 24px;
+  }
+
+  .Services_Box {
+    padding: 15px;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .Services_Box_page img {
+    width: 60px;
+  }
+
+  .Services_Box_title h5 {
+    font-size: 1.1rem;
+  }
+
+  .Services_Box_title p {
+    font-size: 13px;
+  }
+
+  .about_Wrap {
+    gap: 10px;
+  }
+
+  .about_Wrap p {
+    font-size: 14px;
+  }
+
+  #text:after {
+    width: 15%;
+  }
+
+  #signature {
+    width: 120px;
+    margin-left: 10px;
+  }
+
+  .Work_Content {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .Work_Content span {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 4px;
+  }
+
+  .work_details h3 {
+    font-size: 1.3rem;
+  }
+
+  .work_details p {
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
+
+  .Testimonials {
+    padding: 40px 4%;
+  }
+
+  .Testimonials_title h1 {
+    font-size: 1.5rem;
+  }
+
+  .Testimonials_title h2 {
+    font-size: 1rem;
+  }
+
+  .client {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .client_page img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .client_Details {
+    width: 95%;
+    padding: 20px 15px;
+  }
+
+  .client_Details p {
+    font-size: 14px;
+  }
+
+  .client_Details h3 {
+    font-size: 18px;
+  }
+
+  .Banner {
+    height: 200px;
+    margin: 40px 4%;
+  }
+
+  .Banner_title h1 {
+    font-size: 1.3rem;
+  }
+
+  .Banner_title {
+    gap: 15px;
+  }
+
+  .yt-play-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .yt-play-btn i {
+    font-size: 28px;
+  }
+
+  .Counter_Wrap {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .Counter h1 {
+    font-size: 1.5rem;
+  }
+
+  .blog {
+    padding: 40px 4%;
+  }
+
+  .blog_title h1 {
+    font-size: 1.5rem;
+  }
+
+  .blog_title h2 {
+    font-size: 1rem;
+  }
+
+  .Blog_Card img {
+    height: 200px;
+  }
+
+  .Blog_Details h3 {
+    font-size: 16px;
+  }
+
+  .Blog_Details p {
+    font-size: 12px;
+  }
+
+  .Protfolio_Splide {
+    margin-top: 20px;
+  }
+
+  .splide__slide {
+    height: 200px;
+  }
+
+  .portfolio_box {
+    padding: 20px;
+  }
+
+  .protfolio_box h3 {
+    font-size: 1.3rem;
+  }
+
+  .protfolio_box p {
+    font-size: 12px;
+  }
+
+  .New_projekt_title {
+    padding: 40px 4%;
+  }
+
+  .Team_Card {
+    width: 100%;
+  }
+
+  .team_works_steps {
+    min-height: 250px;
+  }
+
+  .Team_Works_title {
+    padding: 0;
+  }
+
+  .footer {
+    padding: 40px 4% 20px;
+  }
+
+  .footer_Wrap {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer_Col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer_Col h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer_Col h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer_Col p {
+    font-size: 13px;
+  }
+
+  .User_Info {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .User_Info input,
+  .User_Info button {
+    width: 100%;
+  }
+
+  .Social_icon {
+    justify-content: center;
+  }
+
+  .Social_icon i {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .footer_bottom {
+    text-align: center;
+  }
+
+  .footer_bottom p {
+    font-size: 12px;
+  }
+
+  .Team_Splide {
+    margin-top: 30px;
+  }
+
+  .splide__slide {
+    height: 200px;
   }
 }
