@@ -8,6 +8,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  
 
   <!-- Remix Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
@@ -26,20 +27,21 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
   </div>
 </header>
 
-    <ul class="ul">
-<i  class="ri-close-large-line" id="close_menu"></i>
-<li><button type="button" class="button"><p class="p">Home</p></button></li>
-<li><button type="button" class="button"><p class="p">Pages</p></button></li>
-<li><button type="button" class="button"><p class="p">Services</p></button></li>
-<li><button type="button" class="button"><p class="p">Projects</p></button></li>
-<li><button type="button" class="button"><p class="p">Addons</p></button></li>
-<li><button type="button" class="button"><p class="p">Blog</p></button></li>
-<li><button type="button" class="button"><p class="p">Contact us</p></button></li>
-<li><button type="button" class="button"><p class="p">Login</p></button></li>
-    </ul>
+   <ul class="ul">
+  <i class="ri-close-large-line" id="close_menu"></i>
+
+  <li><a href="#home" class="nav-link">Home</a></li>
+  <li><a href="#about" class="nav-link">About</a></li>
+  <li><a href="#services" class="nav-link">Services</a></li>
+  <li><a href="#projects" class="nav-link">Projects</a></li>
+  <li><a href="#blog" class="nav-link">Blog</a></li>
+  <li><a href="#contact" class="nav-link">Contact Us</a></li>
+
+</ul>
+
     <i class="ri-menu-5-fill" id="open_menu"></i>
   </nav>
-  <div class="hero_Wrapper section">
+   <div class="hero_Wrapper section" id="home">
     <div  class="hero_title section_title">
       <div class="hero_heading">
         <h1>Desing Your Dream Home With us</h1>
@@ -51,7 +53,8 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
   </div>
   <!--ABOUT SECTION-->
   <!-- ABOUT SECTION -->
-<section class="about_section section">
+<section class="about_section section" id="about">
+
   <div class="about_image">
     
   </div>
@@ -77,7 +80,7 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
   </div>
 </section>
    <!--service section-->
-  <section class="Services section">
+  <section class="Services section" id="services">
   <div class="Service_title section_title">
     <h2>Our Services</h2>
     <h1>What We Provide</h1>
@@ -148,7 +151,7 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
   </div>
 </section>
 <!---PROTFOLO NEW PROJECT-->
-<div class="New_project_protfoli">
+<div class="New_project_protfoli" id="projects">
   <div class="New_project_title section_title">
     <div class="Project_heading">
       <h2>What's New</h2>
@@ -390,17 +393,17 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
   <div class="Counter_Wrap">
 
     <div class="Counter">
-      <h1 class="count" data-count="50" data-suffix="+">30</h1>
+      <h1 class="count" data-count="50" data-suffix="+">10</h1>
       <span>Project Completed</span>
     </div>
 
    <div class="Counter">
-  <h1 class="count" data-count="95" data-suffix="+">80</h1>
+  <h1 class="count" data-count="50" data-suffix="+">20</h1>
   <span>Happy Clients</span>
 </div>
 
 <div class="Counter">
-  <h1 class="count" data-count="45" data-suffix="+">25</h1>
+  <h1 class="count" data-count="45" data-suffix="+">10</h1>
   <span>Fast Closed</span>
 </div>
 
@@ -414,7 +417,7 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
 
 
 <!--BLOGS-->
-<section class="blog section">
+<section class="blog section" id="blog">
 
   <!-- HEADING -->
   <div class="blog_title">
@@ -455,23 +458,25 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
 <!-- FOOTER HTML -->
 <!-- FOOTER -->
 <!-- FOOTER -->
-<footer class="footer">
+<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
+<footer class="footer" id="contact">
   <div class="footer_Wrap">
 
-    <!-- Column 1 -->
+    <!-- Column 1 : About -->
     <div class="footer_Col">
       <div class="logo">
         <img src="assets/logo.png" alt="Kairo Interiors Logo">
       </div>
       <p>
-        Kairo Interiors is dedicated to delivering innovative solutions and creative designs
-        that empower businesses and homes to grow.
+        Kairo Interiors is dedicated to delivering innovative solutions and
+        creative designs that empower businesses and homes to grow.
       </p>
     </div>
 
-    <!-- Column 2 -->
+    <!-- Column 2 : Quick Links -->
     <div class="footer_Col">
-      <h3>Our Links</h3>
+      <h3>Quick Links</h3>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
@@ -482,7 +487,7 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
       </ul>
     </div>
 
-    <!-- Column 3 -->
+    <!-- Column 3 : Services -->
     <div class="footer_Col">
       <h3>Our Services</h3>
       <ul>
@@ -495,29 +500,107 @@ href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.cs
       </ul>
     </div>
 
-    <!-- Column 4 -->
+    <!-- Column 4 : Newsletter + Social -->
     <div class="footer_Col">
       <h3>Newsletter</h3>
       <p>Sign up today for hints, tips, and the latest updates</p>
 
       <div class="User_Info">
-        <input type="email" placeholder="sales@kairointerior.com">
+        <input type="email" placeholder="Enter your email">
         <button type="button">Subscribe</button>
       </div>
 
+      <!-- Social Icons -->
       <div class="Social_icon">
-        <i class="ri-facebook-fill"></i>
-        <i class="ri-twitter-x-fill"></i>
-        <i class="ri-instagram-fill"></i>
-        <i class="ri-linkedin-fill"></i>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919000675919" 
+           target="_blank" 
+           class="whatsapp pulse" 
+           data-tooltip="Chat Now">
+          <i class="ri-whatsapp-fill"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" data-tooltip="Instagram">
+          <i class="ri-instagram-fill"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" data-tooltip="Facebook">
+          <i class="ri-facebook-fill"></i>
+        </a>
+
       </div>
     </div>
 
+    <!-- Column 5 : Contact Us -->
+    <div class="footer_Col">
+      <h3>Contact Us</h3>
+      <ul class="contact_list">
+        <li>
+          <i class="ri-map-pin-line"></i>
+          <span>
+            Kairo Interiors,<br>
+            Vasanth Nagar Main Road,<br>
+            Near JNTU Metro Station,<br>
+            Hyderabad – 500085
+          </span>
+        </li>
+
+        <li>
+          <i class="ri-phone-line"></i>
+          <a href="tel:+919000675919">+91 90006 75919</a>
+        </li>
+
+        <li>
+          <i class="ri-global-line"></i>
+          <a href="https://www.kairointeriors.com" target="_blank">
+            www.kairointeriors.com
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </div>
+
+  <!-- Footer Bottom -->
   <div class="footer_bottom">
     <p>© 2025 Kairo Interiors. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- CONTACT BUTTON -->
+<button class="contact-fab" id="openContact">
+  Contact Us
+</button>
+
+<!-- CONTACT POPUP -->
+<div class="contact-popup" id="contactPopup">
+
+  <div class="popup-box">
+    <span class="close-btn" id="closeContact">&times;</span>
+
+    <h2>Get in Touch</h2>
+    <p>Choose how you’d like to contact us</p>
+
+    <!-- TRUST POINTS -->
+    <div class="trust-points">
+      <span>✔ Free Consultation</span>
+      <span>✔ No Obligation</span>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <a href="tel:+919000675919" class="btn call">📞 Call Now</a>
+
+    <a href="https://wa.me/919000675919" target="_blank" class="btn whatsapp">
+      💬 WhatsApp Chat
+    </a>
+
+  </div>
+</div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="script.js"></script>

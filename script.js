@@ -114,17 +114,18 @@ window.addEventListener('load', revealWork);
     testimonials[index].classList.add('add_anim_left');
   }
 
+const counters = document.querySelectorAll('.count');
+let counterStarted = false;
 
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const counters = document.querySelectorAll('.count');
+const startCounter = () => {
+  if (counterStarted) return;
+  counterStarted = true;
 
   counters.forEach(counter => {
-    let current = parseInt(counter.innerText);
-    const target = parseInt(counter.getAttribute('data-count'));
-    const suffix = counter.getAttribute('data-suffix') || '';
-    const speed = 20;
+    let current = 0;
+    const target = +counter.dataset.count;
+    const suffix = counter.dataset.suffix || '';
+    const speed = 50;
 
     const updateCount = () => {
       if (current < target) {
@@ -138,9 +139,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCount();
   });
+};
 
-});
- 
+const bannerSection = document.querySelector('.Banner');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      startCounter();
+    }
+  });
+}, { threshold: 0.4 });
+
+observer.observe(bannerSection);
+
+
+
 const nav_open = document.querySelector('.ri-menu-5-fill');
 const menu = document.querySelector('ul');
 const nav_close = document.querySelector('#close_menu'); 
@@ -150,4 +164,72 @@ nav_open.addEventListener('click', () =>{
 });
 nav_close.addEventListener('click',() =>{
     menu.classList.remove('show_menu');
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const openMenu = document.getElementById("open_menu");
+  const closeMenu = document.getElementById("close_menu");
+  const menu = document.querySelector(".ul");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  if (openMenu && menu) {
+    openMenu.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+  }
+
+  if (closeMenu && menu) {
+    closeMenu.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  });
+
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const openBtn = document.getElementById("openContact");
+  const closeBtn = document.getElementById("closeContact");
+  const popup = document.getElementById("contactPopup");
+  const showFormBtn = document.getElementById("showForm");
+  const form = document.getElementById("contactForm");
+
+  openBtn.onclick = () => {
+    popup.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  };
+
+  closeBtn.onclick = () => {
+    popup.style.display = "none";
+    document.body.style.overflow = "auto";
+  };
+
+  showFormBtn.onclick = () => {
+    form.style.display = "block";
+  };
+
+  popup.onclick = (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  };
+
+  document.onkeydown = (e) => {
+    if (e.key === "Escape") {
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  };
 });
